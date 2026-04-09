@@ -13,6 +13,7 @@
     "apps/api": {
       "name": "@repo/api",
       "dependencies": {
+        "@repo/schema": "workspace:*",
         "hono": "^4.12.12",
       },
       "devDependencies": {
@@ -23,6 +24,7 @@
       "name": "@repo/web",
       "version": "0.1.0",
       "dependencies": {
+        "@repo/schema": "workspace:*",
         "@repo/ui": "*",
         "next": "16.2.0",
         "react": "^19.2.0",
