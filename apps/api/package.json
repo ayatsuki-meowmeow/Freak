@@ -4,7 +4,8 @@
     "dev": "bun run --hot src/index.ts",
     "build": "bun build src/index.ts --outdir dist",
     "lint": "tsc --noEmit",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "sample-seed": "bun run scripts/seed.sample.ts"
   },
   "dependencies": {
     "@repo/schema": "workspace:*",
