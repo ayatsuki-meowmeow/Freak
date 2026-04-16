@@ -8,6 +8,7 @@
     "sample-seed": "bun run scripts/seed.sample.ts"
   },
   "dependencies": {
+    "@hono/zod-validator": "^0.7.6",
     "@repo/schema": "workspace:*",
     "dotenv": "^17.4.1",
     "drizzle-orm": "^0.45.2",
