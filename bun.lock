@@ -21,9 +21,12 @@
         "pg": "^8.20.0",
       },
       "devDependencies": {
+        "@repo/eslint-config": "*",
+        "@repo/typescript-config": "*",
         "@types/bun": "latest",
         "@types/pg": "^8.20.0",
         "drizzle-kit": "^0.31.10",
+        "eslint": "^9.39.1",
         "tsx": "^4.21.0",
       },
     },
