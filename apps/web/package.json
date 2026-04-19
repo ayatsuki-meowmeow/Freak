@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "eslint --max-warnings 0",
     "check-types": "next typegen && tsc --noEmit",
-    "generate": "openapi-typescript ../../openapi.yaml -o src/generated/api.d.ts"
+    "generate": "orval"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -17,7 +17,6 @@
     "@repo/ui": "*",
     "@tanstack/react-query": "^5.99.0",
     "next": "16.2.0",
-    "openapi-fetch": "^0.17.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-hook-form": "^7.72.1"
@@ -30,7 +29,7 @@
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
     "eslint": "^9.39.1",
-    "openapi-typescript": "^7.13.0",
+    "orval": "^8.8.0",
     "tailwindcss": "^4.2.2",
     "typescript": "5.9.2"
   }
