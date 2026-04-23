@@ -1,9 +1,22 @@
 import { Hono } from 'hono'
+import { swaggerUI } from '@hono/swagger-ui'
+import { join } from 'path'
+import { users } from './routes/users'
 
 const app = new Hono()
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
+app.get('/openapi.yaml', async (c) => {
+  const file = Bun.file(join(import.meta.dir, '../../../openapi.yaml'))
+  return new Response(await file.text(), {
+    headers: { 'Content-Type': 'text/yaml' },
+  })
 })
 
-export default app
+app.get('/doc', swaggerUI({ url: '/openapi.yaml' }))
+
+app.route('/users', users)
+
+export default {
+  port: 8080,
+  fetch: app.fetch,
+}
