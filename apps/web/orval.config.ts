@@ -9,6 +9,12 @@ export default defineConfig({
       schemas: "src/generated/model",
       client: "react-query",
       clean: true,
+      override: {
+        mutator: {
+          path: "src/lib/fetcher.ts",
+          name: "fetcher",
+        },
+      },
     },
   },
 });
